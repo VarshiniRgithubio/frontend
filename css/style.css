@@ -1,0 +1,147 @@
+/* import the fonts from google fonts by url */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+h2{
+    /* three ways to define colours */
+    color: purple;
+    color: #eee;
+    color: rgba(0,0,255,1);
+    background-color: black;
+    width: 100%;
+    border: 4px solid greenyellow;
+}
+div {
+    width: 100%;
+    max-width: 400px;
+    /* vh means viewport height these are the best practices*/
+    background-color: blue;
+
+    /* fonts */
+    font-size: 18px;
+    font-weight: bold;
+    /* font family gives the  */
+    /* we use this inter it will not support for all the company so we use the sans serif for the web safe font */
+    font-family:Inter,sans-serif;
+
+
+    /* border */
+    border-width: 4px;
+    border-style: solid;
+    border-color: black;
+    /* in one line of code */
+    border: 5px solid darkgoldenrod;
+}
+/* ids and classes id take more specfi than  classes */
+#first-paragraph{
+    color :green;
+}
+/* dont use the more specfic bad practice */
+#first-paragraph.paragraph-2.red{
+    color: red;}
+/* also giving the two classes it will only r=take the id color because it is more specfic */
+p.paragraph-2.red{
+    color: brown;
+}
+.paragraph-1{
+    color: rgb(4, 4, 3);
+}
+/* use the !important more specfic but not recomended */
+p{
+     color: black !important;
+    }
+ 
+.box{
+    width: 200px;
+    border: 4px solid blue;
+    box-sizing: border-box;
+    padding: 24px;
+    margin: 16px;
+}
+.title{
+    background-color: aquamarine;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+}
+body{
+    height: 300vh;
+}
+.parent{
+    height: 200px;
+    background-color: red;
+    position: relative;
+    top: 0;
+    
+}
+/* always give the child element inside the parent elements */
+.child{
+    width: 70px;
+    height: 70px;
+    background-color: rgb(16, 18, 16);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+     
+}
+/* media queries */
+.title1{
+    font-size: 52px;
+}
+.paragraph{
+    font-size: 24px;
+}
+/* to website look good and we can see that like mobile phone or in desktop view we us with media queies */
+@media (max-width: 640px){
+    .title1{
+        font-size: 36px;
+    }
+    .paragraph{
+        font-size: 20px;
+    }
+}
+@media ( max-width: 480px){
+    .title1{
+        font-size: 32px;
+    }
+    .paragraph{
+        font-size: 16px;
+    }
+}
+button{
+    /* the button will be smooth and move */
+    transition: 300ms;
+}
+/* when we put the cursor on the button it will show the change */
+button:hover {
+    /* opacity changes the transprancy 0 is full transperency 100 full not transperncy */
+    opacity: 30%;
+    background-color: purple;
+    color: white;
+    padding: 4px;
+
+}
+/* sudo elements  */
+p::before{
+    content: "hi my name is ";
+
+}
+p::after{
+    content: " is a good girl";
+}
+/* animation */
+p{
+    animation: pointdown 1000ms infinite alternate-reverse;
+}
+@keyframes pointdown {
+    /* start with 0 */
+    0%{
+        transform: translateY(0);
+    }
+    /* end with 100 */
+    100%{
+       transform: translateY(16px);
+    }
+
+}
